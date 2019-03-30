@@ -29,6 +29,8 @@ class Voicechannel(commands.Cog):
             return
         if after is None:
             return
+        if after.activity is None:
+            return
         current_game = (after.activity.name).lower()
         # checks when a user in the voicechannel changes games
         try:
@@ -83,12 +85,12 @@ class Voicechannel(commands.Cog):
         if ctx.message.author.id == 141695444995670017:
             if botconfig['General'].getboolean('use_test_guild'):
                 await ctx.send("Switching to the Grand Country.")
-                botconfig.set('General', 'enabled', 'False')
+                botconfig.set('General', 'use_test_guild', 'False')
                 with open('config.ini', 'w') as configfile:
                     botconfig.write(configfile)
             else:
                 await ctx.send("Switching to test server.")
-                botconfig.set('General', 'enabled', 'True')
+                botconfig.set('General', 'use_test_guild', 'True')
                 with open('config.ini', 'w') as configfile:
                     botconfig.write(configfile)
         else:
