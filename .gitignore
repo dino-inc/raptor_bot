@@ -1,3 +1,4 @@
 token.txt
 cogs/__pycache__/
 virtualenv/
+.idea
