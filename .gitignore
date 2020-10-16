@@ -3,4 +3,4 @@ cogs/__pycache__/
 virtualenv/
 .idea
 sounds/*
-venv
+venv/
