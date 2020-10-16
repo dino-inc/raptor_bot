@@ -5,7 +5,7 @@ class Soundboard(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def beep(self, ctx, article):
+    async def beep(self, ctx):
         await ctx.send("Beep.")
 
 def setup(bot):

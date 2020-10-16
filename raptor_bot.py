@@ -6,7 +6,7 @@ import configparser
 import os
 
 bot = commands.Bot(command_prefix='!')
-initial_extensions = ['cogs.voicechannel', 'cogs.twoliars']
+initial_extensions = ['cogs.voicechannel', 'cogs.twoliars', 'cogs.soundboard']
 
 #generating the config if none is found, with default values
 botconfig = configparser.ConfigParser()
